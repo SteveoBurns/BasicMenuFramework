@@ -16,12 +16,22 @@ namespace BasicMenuFramework.Core
             
         }
 
-    
-
         // Update is called once per frame
         void Update()
         {
         
+        }
+        
+        /// <summary>
+        /// Quits from both the Play Mode in the Unity Editor and the Built Application.
+        /// </summary>
+        public void ExitGame()
+        {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
         }
     }
 }

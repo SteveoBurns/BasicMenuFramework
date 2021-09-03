@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,99 +8,112 @@ namespace BasicMenuFramework.Core
 {
     public class SettingsControl : MonoBehaviour
     {
-        [Header("Audio")]
-        [SerializeField] private AudioMixer audioMixer;
-    
-        [Header("Volume Sliders")]
-        [SerializeField] private Slider masterVolumeSlider;
-        [SerializeField] private Slider musicVolumeSlider;
-        [SerializeField] private Slider sfxVolumeSlider;
-    
+        [Header("Settings UI Elements")]
+        public Dropdown resolutionDropdown;
+        
+        private Resolution[] allowedRes;
+
+        private void Awake()
+        {
+            Resolutions();
+            resolutionDropdown.onValueChanged.AddListener(SetResolution);
+        }
+
         // Start is called before the first frame update
         void Start()
         {
-            LoadVolumePlayerPrefs();
-            
-            masterVolumeSlider.onValueChanged.AddListener(MasterSlider);
-            musicVolumeSlider.onValueChanged.AddListener(MusicSlider);
-            sfxVolumeSlider.onValueChanged.AddListener(SFXSlider);
+            LoadPlayerPrefs();
         }
-
-    
-    #region Volume Sliders
-    
-        /// <summary>
-        /// Loads all the saved values for settings from playerprefs.
-        /// </summary>
-        public void LoadVolumePlayerPrefs()
-        {
-            if(PlayerPrefs.HasKey("MusicVolume"))
-            {
-                float volume = PlayerPrefs.GetFloat("MusicVolume");
-                musicVolumeSlider.value = volume;
-                MusicSlider(volume);
-            }
-
-            if(PlayerPrefs.HasKey("SFXVolume"))
-            {
-                float volume = PlayerPrefs.GetFloat("SFXVolume");
-                sfxVolumeSlider.value = volume;
-                SFXSlider(volume);
-            }
         
-            if(PlayerPrefs.HasKey("MasterVolume"))
+        /// <summary>
+        /// Gets the screens resolutions, displays them in the dropdown, sets the default and saves the choice.
+        /// </summary>
+        private void Resolutions()
+        {
+            allowedRes = Screen.resolutions;
+        
+            List<string> resOptions = new List<string>();
+            int currentResolution = 0;
+
+            for (int i = 0; i < allowedRes.Length; i++)
             {
-                float volume = PlayerPrefs.GetFloat("MasterVolume");
-                masterVolumeSlider.value = volume;
-                MasterSlider(volume);
+                string option = allowedRes[i].width + "x" + allowedRes[i].height;
+                resOptions.Add(option);
+
+                if(allowedRes[i].width == Screen.currentResolution.width && allowedRes[i].height == Screen.currentResolution.height)
+                {
+                    currentResolution = i;
+                }
+            }
+	                      
+            resolutionDropdown.AddOptions(resOptions);
+            // Loads any settings saved in playerprefs, or sets it to the current screen resolution
+            if (PlayerPrefs.HasKey("Resolution"))
+            {
+                int resIndex = PlayerPrefs.GetInt("Resolution");
+                resolutionDropdown.value = resIndex;
+                resolutionDropdown.RefreshShownValue();
+                SetResolution(resIndex);
+            }
+            else
+            {
+                resolutionDropdown.value = currentResolution;
+                resolutionDropdown.RefreshShownValue();
             }
         }
     
-     
-    
         /// <summary>
-        /// Function for the Master Volume slider. Saves value to PlayerPrefs.
+        /// Setting the chosen resolution from the dropdown on the UI
         /// </summary>
-        /// <param name="_volume">Float passed in from the slider</param>
-        public void MasterSlider(float _volume)
+        public void SetResolution(int resIndex)
         {
-            PlayerPrefs.SetFloat("MasterVolume", _volume);
-            _volume = VolumeRemap(_volume);
-            audioMixer.SetFloat("MasterGroup", _volume);        
-        }
-    
-        /// <summary>
-        /// Function for the Master Volume slider. Saves value to PlayerPrefs.
-        /// </summary>
-        /// <param name="_volume">Float passed in from the slider</param>
-        public void MusicSlider(float _volume)
-        {
-            PlayerPrefs.SetFloat("MusicVolume", _volume);
-            _volume = VolumeRemap(_volume);
-            audioMixer.SetFloat("MusicGroup", _volume);        
+            PlayerPrefs.SetInt("Resolution", resIndex);
+            Resolution resolution = allowedRes[resIndex];
+            Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         }
 
         /// <summary>
-        /// Function for the SFX Volume slider. Saves value to PlayerPrefs.
+        /// Loads any saved player prefs
         /// </summary>
-        /// <param name="_volume">Float passed in from the slider</param>
-        public void SFXSlider(float _volume)
+        public void LoadPlayerPrefs()
         {
-            PlayerPrefs.SetFloat("SFXVolume", _volume);
-            _volume = VolumeRemap(_volume);
-            audioMixer.SetFloat("SFXGroup", _volume);
+            if(PlayerPrefs.HasKey("Resolution"))
+            {
+                int resIndex = PlayerPrefs.GetInt("Resolution");
+                resolutionDropdown.value = resIndex;
+                resolutionDropdown.RefreshShownValue();
+                SetResolution(resIndex);
+            }
         }
 
         /// <summary>
-        /// Remaps the passed in float from the slider(value 0-1) and outputs to audio scale
+        /// Pauses time by setting timescale to 0.
         /// </summary>
-        /// <param name="value">Passed in slider value</param>
-        /// <returns>Remapped float value to pass into the audio mixer</returns>
-        public float VolumeRemap(float value)
+        public void Pause() => Time.timeScale = 0;
+        
+        /// <summary>
+        /// Unpauses time by setting timescale to 1.
+        /// </summary>
+        public void UnPause() => Time.timeScale = 1;
+        
+        /// <summary>
+        /// Quits from both the Play Mode in the Unity Editor and the Built Application.
+        /// </summary>
+        public void ExitGame()
         {
-            return -40 + (value - 0) * (20 - -40) / (1 - 0);
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
         }
-    #endregion
-    
+
+        /// <summary>
+        /// Loads the scene of the passed scene name
+        /// </summary>
+        /// <param name="_sceneName">Scene name to load</param>
+        public void LoadScene(string _sceneName) => SceneManager.LoadScene(_sceneName);
+
+        
     }
 }
