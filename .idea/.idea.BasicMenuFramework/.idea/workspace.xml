@@ -12,6 +12,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Core/SettingsControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/AudioSettingsControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/MenuControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/SettingsControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xbkh9TJFNg515zyoPFuCDlBL6w" />
   <component name="ProjectViewState">
@@ -55,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630631292103</updated>
-      <workItem from="1630631299108" duration="4910000" />
+      <workItem from="1630631299108" duration="18306000" />
     </task>
     <servers />
   </component>

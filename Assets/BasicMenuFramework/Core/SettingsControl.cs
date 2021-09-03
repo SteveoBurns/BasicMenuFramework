@@ -9,14 +9,20 @@ namespace BasicMenuFramework.Core
     public class SettingsControl : MonoBehaviour
     {
         [Header("Settings UI Elements")]
-        public Dropdown resolutionDropdown;
-        
+        [SerializeField] private Dropdown resolutionDropdown;
+        [SerializeField] private Dropdown qualityDropdown;
+        [SerializeField] private Toggle fullscreenToggle;
+
         private Resolution[] allowedRes;
+        
 
         private void Awake()
         {
             Resolutions();
+            QualitySetup();
             resolutionDropdown.onValueChanged.AddListener(SetResolution);
+            qualityDropdown.onValueChanged.AddListener(Quality);
+            
         }
 
         // Start is called before the first frame update
@@ -47,6 +53,7 @@ namespace BasicMenuFramework.Core
             }
 	                      
             resolutionDropdown.AddOptions(resOptions);
+            
             // Loads any settings saved in playerprefs, or sets it to the current screen resolution
             if (PlayerPrefs.HasKey("Resolution"))
             {
@@ -73,6 +80,32 @@ namespace BasicMenuFramework.Core
         }
 
         /// <summary>
+        /// Setting up the Quality Options for the dropdown on the UI.
+        /// </summary>
+        private void QualitySetup()
+        {
+            List<string> qualities = new List<string>();
+            string[] qualitySettings = QualitySettings.names;
+            foreach(string _quality in qualitySettings)
+            {
+                qualities.Add(_quality);
+            }
+            qualityDropdown.AddOptions(qualities);
+            qualityDropdown.value = QualitySettings.GetQualityLevel();
+            qualityDropdown.RefreshShownValue();
+        }
+        
+        /// <summary>
+        /// Sets the graphics quality level
+        /// </summary>
+        /// <param name="_index"></param>
+        public void Quality(int _index)
+        {
+            QualitySettings.SetQualityLevel(_index);
+            PlayerPrefs.SetInt("Quality", _index);
+        }
+
+        /// <summary>
         /// Loads any saved player prefs
         /// </summary>
         public void LoadPlayerPrefs()
@@ -84,35 +117,42 @@ namespace BasicMenuFramework.Core
                 resolutionDropdown.RefreshShownValue();
                 SetResolution(resIndex);
             }
+            if (PlayerPrefs.HasKey("Quality"))
+            {
+                int quality = PlayerPrefs.GetInt("Quality");
+                qualityDropdown.value = quality;
+                Quality(quality);
+            }
+            if (PlayerPrefs.HasKey("Fullscreen"))
+            {
+                bool _fullscreen = true;
+                int fullscreen = PlayerPrefs.GetInt("Fullscreen");
+                if (fullscreen == 1)
+                {
+                    _fullscreen = true;
+                    fullscreenToggle.isOn = true;
+                }
+                else if (fullscreen == 0)
+                {
+                    _fullscreen = false;
+                    fullscreenToggle.isOn = false;
+                }
+                Fullscreen(_fullscreen);
+            }
         }
-
-        /// <summary>
-        /// Pauses time by setting timescale to 0.
-        /// </summary>
-        public void Pause() => Time.timeScale = 0;
         
         /// <summary>
-        /// Unpauses time by setting timescale to 1.
-        /// </summary>
-        public void UnPause() => Time.timeScale = 1;
-        
-        /// <summary>
-        /// Quits from both the Play Mode in the Unity Editor and the Built Application.
-        /// </summary>
-        public void ExitGame()
+        /// Turns fullscreen mode on and off
+        /// </summary>    
+        public void Fullscreen(bool _fullscreen)
         {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-        Application.Quit();
-        #endif
+            PlayerPrefs.SetInt("Fullscreen", (_fullscreen ? 1 : 0));
+            Screen.fullScreen = _fullscreen;
         }
 
-        /// <summary>
-        /// Loads the scene of the passed scene name
-        /// </summary>
-        /// <param name="_sceneName">Scene name to load</param>
-        public void LoadScene(string _sceneName) => SceneManager.LoadScene(_sceneName);
+        
+        
+        
 
         
     }

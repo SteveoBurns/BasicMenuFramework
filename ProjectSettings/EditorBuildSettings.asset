@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BasicMenuFramework/Test/Core/Audio Settings Test/Audio Settings
+      Test.unity
+    guid: 3f415a9fd43ed974badc011cfc635f0a
+  - enabled: 1
+    path: Assets/BasicMenuFramework/Test/Core/Menu Test/Menu Test.unity
+    guid: 6203a6be5cda8514b8f40980be4f932d
+  - enabled: 1
+    path: Assets/BasicMenuFramework/Test/Core/Settings Test/Settings Test.unity
+    guid: fd8b7063d524e2449ad23c133e6ce99d
   m_configObjects: {}

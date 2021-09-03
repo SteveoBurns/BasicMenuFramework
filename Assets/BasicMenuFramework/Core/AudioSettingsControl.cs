@@ -8,15 +8,21 @@ namespace BasicMenuFramework.Core
 {
     public class AudioSettingsControl : MonoBehaviour
     {
-        [Header("Audio Mixer Variables")]
+        [Header("Audio Mixer"),Tooltip("The Audio Mixer the assigned volume silders will correspond too.")]
         [SerializeField] private AudioMixer audioMixer;
+        
+        [Header("Exposed Parameter Names for Mixer Groups"),Tooltip("Name of the exposed Master Volume parameter in the Audio Mixer")]
         [SerializeField] private string masterGroupExposedParam;
+        [Tooltip("Name of the exposed Music Volume parameter in the Audio Mixer")]
         [SerializeField] private string musicGroupExposedParam;
+        [Tooltip("Name of the exposed SFX Volume parameter in the Audio Mixer")]
         [SerializeField] private string sfxGroupExposedParam;
 
-        [Header("Volume Sliders")]
+        [Header("Volume Sliders"), Tooltip("The Master Volume slider in the scene")]
         [SerializeField] private Slider masterVolumeSlider;
+        [Tooltip("The Music Volume slider in the scene")]
         [SerializeField] private Slider musicVolumeSlider;
+        [Tooltip("The SFX Volume slider in the scene")]
         [SerializeField] private Slider sfxVolumeSlider;
     
         // Start is called before the first frame update
