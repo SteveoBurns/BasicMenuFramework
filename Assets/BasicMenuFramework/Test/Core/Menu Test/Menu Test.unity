@@ -1347,7 +1347,7 @@ GameObject:
   m_Layer: 0
   m_Name: Menu Control
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1374,6 +1374,8 @@ MonoBehaviour:
     sceneToLoad: {fileID: 102900000, guid: fd8b7063d524e2449ad23c133e6ce99d, type: 3}
   - button: {fileID: 1612005067}
     sceneToLoad: {fileID: 102900000, guid: 6203a6be5cda8514b8f40980be4f932d, type: 3}
+  - button: {fileID: 0}
+    sceneToLoad: {fileID: 102900000, guid: 3f415a9fd43ed974badc011cfc635f0a, type: 3}
 --- !u!4 &1458159814
 Transform:
   m_ObjectHideFlags: 0
