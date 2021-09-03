@@ -9,15 +9,26 @@ using UnityEngine.UI;
 
 namespace BasicMenuFramework.Core
 {
+    /// <summary>
+    /// The MenuControl class handles all the UI functionality for scene management, pause and quit.
+    /// </summary>
     public class MenuControl : MonoBehaviour
     {
         [Header("Menu Buttons"),Tooltip("The quit button within the scene")]
         [SerializeField] private Button quitButton;
         [Tooltip("The pause button within the scene")]
         [SerializeField] private Button pauseButton;
+
+        public bool showPopUp = false;
+        [SerializeField] private GameObject popUp;
         
         public List<SceneLoadButton> sceneLoadButtons = new List<SceneLoadButton>();
         
+        private bool isPaused = false;
+        
+        /// <summary>
+        /// This contains the data needed for the Scene Load Buttons list to function.
+        /// </summary>
         [Serializable]
         public class SceneLoadButton
         {
@@ -33,13 +44,15 @@ namespace BasicMenuFramework.Core
         }
 
  
-        private bool isPaused = false;
 
         // Start is called before the first frame update
         void Start()
         {
+            // Adding listners to the UI buttons.
             quitButton.onClick.AddListener(QuitGame);
             pauseButton.onClick.AddListener(Pause);
+            
+            // Asigning the load scene method to each button in sceneLoadButtons.
             foreach(SceneLoadButton _scene in sceneLoadButtons)
             {
                 _scene.button.onClick.AddListener(_scene.LoadScene);
@@ -56,11 +69,16 @@ namespace BasicMenuFramework.Core
             {
                 Time.timeScale = 0;
                 isPaused = true;
+                if(showPopUp)
+                    popUp.SetActive(true);
+                
             }
             else if(isPaused)
             {
                 Time.timeScale = 1;
                 isPaused = false;
+                if(showPopUp)
+                    popUp.SetActive(false);
             }
         }
         
@@ -76,10 +94,5 @@ namespace BasicMenuFramework.Core
         #endif
         }
 
-        /// <summary>
-        /// Loads the scene of the passed scene name
-        /// </summary>
-        /// <param name="_sceneName">Scene name to load</param>
-        public void LoadScene(string _sceneName) => SceneManager.LoadScene(_sceneName);
     }
 }

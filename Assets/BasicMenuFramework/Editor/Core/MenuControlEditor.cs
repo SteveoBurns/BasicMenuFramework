@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEditor;
+using UnityEditor.AnimatedValues;
 
 using UnityEngine;
 
@@ -18,6 +19,10 @@ namespace BasicMenuFramework.Editor.Core
         private SerializedProperty quitButtonProperty;
         private SerializedProperty pauseButtonProperty;
         private SerializedProperty sceneLoadButtonsProperty;
+        private SerializedProperty showPopUpProperty;
+        private SerializedProperty popUpProperty;
+
+        private AnimBool showPopUp = new AnimBool();
 
         private void OnEnable()
         {
@@ -26,6 +31,11 @@ namespace BasicMenuFramework.Editor.Core
             quitButtonProperty = serializedObject.FindProperty("quitButton");
             pauseButtonProperty = serializedObject.FindProperty("pauseButton");
             sceneLoadButtonsProperty = serializedObject.FindProperty("sceneLoadButtons");
+            showPopUpProperty = serializedObject.FindProperty("showPopUp");
+            popUpProperty = serializedObject.FindProperty("popUp");
+
+            showPopUp.value = showPopUpProperty.boolValue;
+            showPopUp.valueChanged.AddListener(Repaint);
         }
 
         public override void OnInspectorGUI()
@@ -36,6 +46,18 @@ namespace BasicMenuFramework.Editor.Core
             {
                 EditorGUILayout.PropertyField(quitButtonProperty);
                 EditorGUILayout.PropertyField(pauseButtonProperty);
+                EditorGUILayout.PropertyField(showPopUpProperty);
+                
+                showPopUp.target = showPopUpProperty.boolValue;
+                if(EditorGUILayout.BeginFadeGroup(showPopUp.faded))
+                {
+                    EditorGUI.indentLevel++;
+                    {
+                        EditorGUILayout.PropertyField(popUpProperty);
+                    }
+                    EditorGUI.indentLevel--;
+                }
+                EditorGUILayout.EndFadeGroup();
             }
             EditorGUILayout.EndVertical();
             
