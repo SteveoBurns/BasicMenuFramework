@@ -1374,8 +1374,6 @@ MonoBehaviour:
     sceneToLoad: {fileID: 102900000, guid: fd8b7063d524e2449ad23c133e6ce99d, type: 3}
   - button: {fileID: 1612005067}
     sceneToLoad: {fileID: 102900000, guid: 6203a6be5cda8514b8f40980be4f932d, type: 3}
-  - button: {fileID: 0}
-    sceneToLoad: {fileID: 102900000, guid: 3f415a9fd43ed974badc011cfc635f0a, type: 3}
 --- !u!4 &1458159814
 Transform:
   m_ObjectHideFlags: 0

@@ -20,8 +20,10 @@ namespace BasicMenuFramework.Core
         [SerializeField] private Button pauseButton;
 
         public bool showPopUp = false;
-        [SerializeField] private GameObject popUp;
+        [SerializeField,Tooltip("The GameObject that will appear when pause is pressed.")] 
+        private GameObject popUp;
         
+        [Tooltip("Buttons and their corresponding scenes to load when pressed.")]
         public List<SceneLoadButton> sceneLoadButtons = new List<SceneLoadButton>();
         
         private bool isPaused = false;
@@ -37,9 +39,15 @@ namespace BasicMenuFramework.Core
             [Tooltip("Assign the scene for the button to load when clicked")]
             public SceneAsset sceneToLoad;
 
+            /// <summary>
+            /// Loads the set scene in the class.
+            /// </summary>
             public void LoadScene()
             {
-                SceneManager.LoadScene(sceneToLoad.name);
+                if(sceneToLoad != null)
+                    SceneManager.LoadScene(sceneToLoad.name);
+                else
+                    throw new NullReferenceException($"No corresponding Scene to Load has been set in the Inspector for this Button.");
             }
         }
 
@@ -49,14 +57,20 @@ namespace BasicMenuFramework.Core
         void Start()
         {
             // Adding listners to the UI buttons.
-            quitButton.onClick.AddListener(QuitGame);
-            pauseButton.onClick.AddListener(Pause);
+            if(quitButton != null)
+                quitButton.onClick.AddListener(QuitGame);
+            if(pauseButton != null)
+                pauseButton.onClick.AddListener(Pause);
             
             // Asigning the load scene method to each button in sceneLoadButtons.
-            foreach(SceneLoadButton _scene in sceneLoadButtons)
+            for(int i = 0; i < sceneLoadButtons.Count; i++)
             {
-                _scene.button.onClick.AddListener(_scene.LoadScene);
+                if(sceneLoadButtons[i].sceneToLoad != null)
+                    sceneLoadButtons[i].button.onClick.AddListener(sceneLoadButtons[i].LoadScene);
+                else
+                    throw new NullReferenceException($"No corresponding Scene to Load has been set in the Inspector for {sceneLoadButtons[i].button.name}.");
             }
+            
         }
 
         
@@ -69,16 +83,20 @@ namespace BasicMenuFramework.Core
             {
                 Time.timeScale = 0;
                 isPaused = true;
-                if(showPopUp)
+                if(showPopUp && popUp != null)
                     popUp.SetActive(true);
+                if(showPopUp && popUp == null)
+                    Debug.LogError("No object has been set as the Pop Up in the Inspector.");
                 
             }
             else if(isPaused)
             {
                 Time.timeScale = 1;
                 isPaused = false;
-                if(showPopUp)
+                if(showPopUp && popUp != null)
                     popUp.SetActive(false);
+                if(showPopUp && popUp == null)
+                    Debug.LogError("No object has been set as the Pop Up in the Inspector.");
             }
         }
         

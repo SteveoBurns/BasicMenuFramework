@@ -6,22 +6,36 @@ using UnityEngine.UI;
 
 namespace BasicMenuFramework.Core
 {
+    /// <summary>
+    /// This class handles the graphics options for the menu system.
+    /// </summary>
     public class SettingsControl : MonoBehaviour
     {
         [Header("Settings UI Elements")]
-        [SerializeField] private Dropdown resolutionDropdown;
-        [SerializeField] private Dropdown qualityDropdown;
-        [SerializeField] private Toggle fullscreenToggle;
+        [SerializeField, Tooltip("The Dropdown for Resolution Choice")] 
+        private Dropdown resolutionDropdown;
+        [SerializeField, Tooltip("The Dropdown for Quality Settings")] 
+        private Dropdown qualityDropdown;
+        [SerializeField, Tooltip("The Toggle for fullscreen")] 
+        private Toggle fullscreenToggle;
 
         private Resolution[] allowedRes;
         
 
         private void Awake()
         {
-            Resolutions();
-            QualitySetup();
-            resolutionDropdown.onValueChanged.AddListener(SetResolution);
-            qualityDropdown.onValueChanged.AddListener(Quality);
+            CheckVariables();
+            if(resolutionDropdown != null)
+            {
+                resolutionDropdown.onValueChanged.AddListener(SetResolution);
+                Resolutions();
+            }
+
+            if(qualityDropdown != null)
+            {
+                qualityDropdown.onValueChanged.AddListener(Quality);
+                QualitySetup();
+            }
             
         }
 
@@ -29,6 +43,18 @@ namespace BasicMenuFramework.Core
         void Start()
         {
             LoadPlayerPrefs();
+        }
+        
+        /// <summary>
+        /// Null Checks and throws Exceptions for all variables within the class.
+        /// </summary>
+        /// <exception cref="UnassignedReferenceException"></exception>
+        private void CheckVariables()
+        {
+            if(resolutionDropdown == null)
+                Debug.LogWarning($"No Dropdown Element has been assigned for the Resolution Field.");
+            if(qualityDropdown == null)
+                Debug.LogWarning($"No Dropdown Element has been assigned for the Quality Field.");
         }
         
         /// <summary>
@@ -122,8 +148,9 @@ namespace BasicMenuFramework.Core
                 int quality = PlayerPrefs.GetInt("Quality");
                 qualityDropdown.value = quality;
                 Quality(quality);
+                
             }
-            if (PlayerPrefs.HasKey("Fullscreen"))
+            if (PlayerPrefs.HasKey("Fullscreen") )
             {
                 bool _fullscreen = true;
                 int fullscreen = PlayerPrefs.GetInt("Fullscreen");
