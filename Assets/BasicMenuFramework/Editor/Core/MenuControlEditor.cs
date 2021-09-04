@@ -46,18 +46,20 @@ namespace BasicMenuFramework.Editor.Core
             {
                 EditorGUILayout.PropertyField(quitButtonProperty);
                 EditorGUILayout.PropertyField(pauseButtonProperty);
-                EditorGUILayout.PropertyField(showPopUpProperty);
-                
-                showPopUp.target = showPopUpProperty.boolValue;
-                if(EditorGUILayout.BeginFadeGroup(showPopUp.faded))
-                {
                     EditorGUI.indentLevel++;
-                    {
-                        EditorGUILayout.PropertyField(popUpProperty);
-                    }
+                        EditorGUILayout.PropertyField(showPopUpProperty);
+
+                        showPopUp.target = showPopUpProperty.boolValue;
+                        if(EditorGUILayout.BeginFadeGroup(showPopUp.faded))
+                        {
+                            EditorGUI.indentLevel++;
+                            {
+                                EditorGUILayout.PropertyField(popUpProperty);
+                            }
+                            EditorGUI.indentLevel--;
+                        }
+                        EditorGUILayout.EndFadeGroup();
                     EditorGUI.indentLevel--;
-                }
-                EditorGUILayout.EndFadeGroup();
             }
             EditorGUILayout.EndVertical();
             
