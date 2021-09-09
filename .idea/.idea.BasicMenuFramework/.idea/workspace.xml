@@ -11,12 +11,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Sort and Search/Scripts/SphereGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Core/SettingsControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/AudioSettingsControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/MenuControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BasicMenuFramework/Editor/Core/SettingsControlEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sort and Search/Scripts/Sphere.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xbkh9TJFNg515zyoPFuCDlBL6w" />
   <component name="ProjectViewState">
@@ -63,6 +61,7 @@
       <workItem from="1630631299108" duration="20750000" />
       <workItem from="1630725252776" duration="8305000" />
       <workItem from="1630802807374" duration="10270000" />
+      <workItem from="1631151318150" duration="88000" />
     </task>
     <servers />
   </component>
