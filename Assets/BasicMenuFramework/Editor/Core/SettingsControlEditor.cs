@@ -10,6 +10,9 @@ using UnityEngine;
 
 namespace BasicMenuFramework.Editor.Core
 {
+    /// <summary>
+    /// A custom editor for the SettingsControl class
+    /// </summary>
     [CustomEditor(typeof(SettingsControl))]
     public class SettingsControlEditor : UnityEditor.Editor
     {

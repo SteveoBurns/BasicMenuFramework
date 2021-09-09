@@ -11,6 +11,9 @@ using UnityEngine;
 
 namespace BasicMenuFramework.Editor.Core
 {
+    /// <summary>
+    /// A custom editor for the MenuControls class
+    /// </summary>
     [CustomEditor(typeof(MenuControl))]
     public class MenuControlEditor : UnityEditor.Editor
     {

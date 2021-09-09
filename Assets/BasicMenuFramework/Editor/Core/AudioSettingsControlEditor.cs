@@ -9,6 +9,9 @@ using UnityEngine;
 
 namespace BasicMenuFramework.Editor.Core
 {
+    /// <summary>
+    /// A custom editor for the AudioSettingsControl class
+    /// </summary>
     [CustomEditor(typeof(AudioSettingsControl))]
     public class AudioSettingsControlEditor : UnityEditor.Editor
     {
