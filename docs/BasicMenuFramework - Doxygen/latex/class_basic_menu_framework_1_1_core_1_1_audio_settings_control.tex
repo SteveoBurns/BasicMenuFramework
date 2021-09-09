@@ -1,0 +1,204 @@
+\hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control}{}\doxysection{Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control Class Reference}
+\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control}\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+
+
+This class handles Audio UI controls interactions with the Audio Mixer for the scene, saving set values using Player\+Prefs.  
+
+
+Inheritance diagram for Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_basic_menu_framework_1_1_core_1_1_audio_settings_control}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6648a996b1331f0add2a766e8fc6cfa0}{Load\+Volume\+Player\+Prefs}} ()
+\begin{DoxyCompactList}\small\item\em Loads all the saved values for settings from playerprefs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a7dc4b5e88cc7d963938d8b57cf657d5a}{Master\+Slider}} (float \+\_\+volume)
+\begin{DoxyCompactList}\small\item\em Function for the Master Volume slider. Saves value to Player\+Prefs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a4709e0d7122bf9349596c6a898e384b4}{Music\+Slider}} (float \+\_\+volume)
+\begin{DoxyCompactList}\small\item\em Function for the Master Volume slider. Saves value to Player\+Prefs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_abd8d90b5664ce9bd0fb7b56ed0c4f9b8}{SFXSlider}} (float \+\_\+volume)
+\begin{DoxyCompactList}\small\item\em Function for the SFX Volume slider. Saves value to Player\+Prefs. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_af91989e585580b836f59f3172ac0ed44}{Volume\+Remap}} (float value)
+\begin{DoxyCompactList}\small\item\em Remaps the passed in float from the slider(value 0-\/1) and outputs to audio scale \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a2bb7fce831614111fbae910bcae59ad0}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a017ce4e6db8f4eca14d99d1033f4fc6e}{Check\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Null Checks and throws Exceptions for all variables within the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Mixer \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a1b277773bb9801e6c49285f21f7da53d}{audio\+Mixer}}
+\item 
+string \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a83537db77d8d3056f175e44882251907}{master\+Group\+Exposed\+Param}}
+\item 
+string \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a3be663a9feb11c005d47b8ea1abb117b}{music\+Group\+Exposed\+Param}}
+\item 
+string \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a47dd944e8a08d7f91593c5d26eabf9fe}{sfx\+Group\+Exposed\+Param}}
+\item 
+Slider \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6148e106c1e3de567a67d167ef384984}{master\+Volume\+Slider}}
+\item 
+Slider \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a96832b5bd77d79f9a7c0f88cc2443fbf}{music\+Volume\+Slider}}
+\item 
+Slider \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6106e60b385702404cba3184c79c245a}{sfx\+Volume\+Slider}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles Audio UI controls interactions with the Audio Mixer for the scene, saving set values using Player\+Prefs. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a017ce4e6db8f4eca14d99d1033f4fc6e}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a017ce4e6db8f4eca14d99d1033f4fc6e}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!CheckVariables@{CheckVariables}}
+\index{CheckVariables@{CheckVariables}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{CheckVariables()}{CheckVariables()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Check\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Null Checks and throws Exceptions for all variables within the class. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unassigned\+Reference\+Exception} & \\
+\hline
+{\em Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6648a996b1331f0add2a766e8fc6cfa0}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6648a996b1331f0add2a766e8fc6cfa0}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!LoadVolumePlayerPrefs@{LoadVolumePlayerPrefs}}
+\index{LoadVolumePlayerPrefs@{LoadVolumePlayerPrefs}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{LoadVolumePlayerPrefs()}{LoadVolumePlayerPrefs()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Load\+Volume\+Player\+Prefs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads all the saved values for settings from playerprefs. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a7dc4b5e88cc7d963938d8b57cf657d5a}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a7dc4b5e88cc7d963938d8b57cf657d5a}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!MasterSlider@{MasterSlider}}
+\index{MasterSlider@{MasterSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{MasterSlider()}{MasterSlider()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Master\+Slider (\begin{DoxyParamCaption}\item[{float}]{\+\_\+volume }\end{DoxyParamCaption})}
+
+
+
+Function for the Master Volume slider. Saves value to Player\+Prefs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+volume} & Float passed in from the slider\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a4709e0d7122bf9349596c6a898e384b4}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a4709e0d7122bf9349596c6a898e384b4}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!MusicSlider@{MusicSlider}}
+\index{MusicSlider@{MusicSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{MusicSlider()}{MusicSlider()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Music\+Slider (\begin{DoxyParamCaption}\item[{float}]{\+\_\+volume }\end{DoxyParamCaption})}
+
+
+
+Function for the Master Volume slider. Saves value to Player\+Prefs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+volume} & Float passed in from the slider\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_abd8d90b5664ce9bd0fb7b56ed0c4f9b8}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_abd8d90b5664ce9bd0fb7b56ed0c4f9b8}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!SFXSlider@{SFXSlider}}
+\index{SFXSlider@{SFXSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{SFXSlider()}{SFXSlider()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+SFXSlider (\begin{DoxyParamCaption}\item[{float}]{\+\_\+volume }\end{DoxyParamCaption})}
+
+
+
+Function for the SFX Volume slider. Saves value to Player\+Prefs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+volume} & Float passed in from the slider\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a2bb7fce831614111fbae910bcae59ad0}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a2bb7fce831614111fbae910bcae59ad0}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!Start@{Start}}
+\index{Start@{Start}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_af91989e585580b836f59f3172ac0ed44}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_af91989e585580b836f59f3172ac0ed44}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!VolumeRemap@{VolumeRemap}}
+\index{VolumeRemap@{VolumeRemap}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{VolumeRemap()}{VolumeRemap()}}
+{\footnotesize\ttfamily float Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+Volume\+Remap (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Remaps the passed in float from the slider(value 0-\/1) and outputs to audio scale 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Passed in slider value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Remapped float value to pass into the audio mixer
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a1b277773bb9801e6c49285f21f7da53d}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a1b277773bb9801e6c49285f21f7da53d}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!audioMixer@{audioMixer}}
+\index{audioMixer@{audioMixer}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{audioMixer}{audioMixer}}
+{\footnotesize\ttfamily Audio\+Mixer Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+audio\+Mixer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a83537db77d8d3056f175e44882251907}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a83537db77d8d3056f175e44882251907}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!masterGroupExposedParam@{masterGroupExposedParam}}
+\index{masterGroupExposedParam@{masterGroupExposedParam}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{masterGroupExposedParam}{masterGroupExposedParam}}
+{\footnotesize\ttfamily string Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+master\+Group\+Exposed\+Param\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6148e106c1e3de567a67d167ef384984}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6148e106c1e3de567a67d167ef384984}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!masterVolumeSlider@{masterVolumeSlider}}
+\index{masterVolumeSlider@{masterVolumeSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{masterVolumeSlider}{masterVolumeSlider}}
+{\footnotesize\ttfamily Slider Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+master\+Volume\+Slider\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a3be663a9feb11c005d47b8ea1abb117b}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a3be663a9feb11c005d47b8ea1abb117b}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!musicGroupExposedParam@{musicGroupExposedParam}}
+\index{musicGroupExposedParam@{musicGroupExposedParam}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{musicGroupExposedParam}{musicGroupExposedParam}}
+{\footnotesize\ttfamily string Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+music\+Group\+Exposed\+Param\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a96832b5bd77d79f9a7c0f88cc2443fbf}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a96832b5bd77d79f9a7c0f88cc2443fbf}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!musicVolumeSlider@{musicVolumeSlider}}
+\index{musicVolumeSlider@{musicVolumeSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{musicVolumeSlider}{musicVolumeSlider}}
+{\footnotesize\ttfamily Slider Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+music\+Volume\+Slider\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a47dd944e8a08d7f91593c5d26eabf9fe}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a47dd944e8a08d7f91593c5d26eabf9fe}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!sfxGroupExposedParam@{sfxGroupExposedParam}}
+\index{sfxGroupExposedParam@{sfxGroupExposedParam}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{sfxGroupExposedParam}{sfxGroupExposedParam}}
+{\footnotesize\ttfamily string Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+sfx\+Group\+Exposed\+Param\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6106e60b385702404cba3184c79c245a}\label{class_basic_menu_framework_1_1_core_1_1_audio_settings_control_a6106e60b385702404cba3184c79c245a}} 
+\index{BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}!sfxVolumeSlider@{sfxVolumeSlider}}
+\index{sfxVolumeSlider@{sfxVolumeSlider}!BasicMenuFramework.Core.AudioSettingsControl@{BasicMenuFramework.Core.AudioSettingsControl}}
+\doxysubsubsection{\texorpdfstring{sfxVolumeSlider}{sfxVolumeSlider}}
+{\footnotesize\ttfamily Slider Basic\+Menu\+Framework.\+Core.\+Audio\+Settings\+Control.\+sfx\+Volume\+Slider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/steve/\+Documents/\+Git\+Hub/\+Basic\+Menu\+Framework/\+Assets/\+Basic\+Menu\+Framework/\+Core/\mbox{\hyperlink{_audio_settings_control_8cs}{Audio\+Settings\+Control.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator}{}\doxysection{Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator Class Reference}
+\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator}\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+
+
+Handles the operations for generating objects, sorting and searching.  
+
+
+Inheritance diagram for Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a7993da43b0124d2828f3e104e0255545}{Spawn\+Prefab}} ()
+\begin{DoxyCompactList}\small\item\em Spawns a sphere with a random scale and position and adds it into the list objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a792c8b9056519ed23085761346222ab8}{Get\+Smallest\+Sphere}} ()
+\begin{DoxyCompactList}\small\item\em Using the \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_size_comparer}{Sphere\+Size\+Comparer}} sorts the objects list smallest to largest. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a87d789a6ebf4eeab06eb2ede4b805189}{Organise\+Spheres}} ()
+\begin{DoxyCompactList}\small\item\em Lines up the objects in objects List in the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a67c97fc0c819610ca8c8cd554cab77e7}{Min\+Slider}} (float \+\_\+size)
+\begin{DoxyCompactList}\small\item\em Function for the UI Slider. Sets the search\+Min variable at runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_afb2bca3cac4c20a3d211ca4964f851d3}{Max\+Slider}} (float \+\_\+size)
+\begin{DoxyCompactList}\small\item\em Function for the UI Slider. Sets the search\+Max variable at runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_af3054b65993d8978e233f982071e8b19}{Search}} ()
+\begin{DoxyCompactList}\small\item\em Loops through the objects List and moves the objects up the y axis that fit in between the set values of search\+Min and search\+Max. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere}{Sphere}} $>$ \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a8b1d5b1c73fdc1ac9b30ccd5d5b5ed69}{objects}} = new List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere}{Sphere}}$>$()
+\item 
+Game\+Object \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_ae651d58b45ad7c6a84cba57c49b129da}{prefab}}
+\item 
+float \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a35c7cac56de26928868b2cc51fd2d8a7}{search\+Min}} = 0
+\item 
+float \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_acce204b8c42b4a17b4e1dc6279674044}{search\+Max}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the operations for generating objects, sorting and searching. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a792c8b9056519ed23085761346222ab8}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a792c8b9056519ed23085761346222ab8}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!GetSmallestSphere@{GetSmallestSphere}}
+\index{GetSmallestSphere@{GetSmallestSphere}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{GetSmallestSphere()}{GetSmallestSphere()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Get\+Smallest\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Using the \mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere_size_comparer}{Sphere\+Size\+Comparer}} sorts the objects list smallest to largest. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_afb2bca3cac4c20a3d211ca4964f851d3}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_afb2bca3cac4c20a3d211ca4964f851d3}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!MaxSlider@{MaxSlider}}
+\index{MaxSlider@{MaxSlider}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{MaxSlider()}{MaxSlider()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Max\+Slider (\begin{DoxyParamCaption}\item[{float}]{\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Function for the UI Slider. Sets the search\+Max variable at runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+size} & Passed in float from the Slider\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a67c97fc0c819610ca8c8cd554cab77e7}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a67c97fc0c819610ca8c8cd554cab77e7}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!MinSlider@{MinSlider}}
+\index{MinSlider@{MinSlider}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{MinSlider()}{MinSlider()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Min\+Slider (\begin{DoxyParamCaption}\item[{float}]{\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Function for the UI Slider. Sets the search\+Min variable at runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+size} & Passed in float from the Slider\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a87d789a6ebf4eeab06eb2ede4b805189}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a87d789a6ebf4eeab06eb2ede4b805189}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!OrganiseSpheres@{OrganiseSpheres}}
+\index{OrganiseSpheres@{OrganiseSpheres}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{OrganiseSpheres()}{OrganiseSpheres()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Organise\+Spheres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lines up the objects in objects List in the scene. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_af3054b65993d8978e233f982071e8b19}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_af3054b65993d8978e233f982071e8b19}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!Search@{Search}}
+\index{Search@{Search}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loops through the objects List and moves the objects up the y axis that fit in between the set values of search\+Min and search\+Max. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a7993da43b0124d2828f3e104e0255545}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a7993da43b0124d2828f3e104e0255545}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!SpawnPrefab@{SpawnPrefab}}
+\index{SpawnPrefab@{SpawnPrefab}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{SpawnPrefab()}{SpawnPrefab()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+Spawn\+Prefab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Spawns a sphere with a random scale and position and adds it into the list objects. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a8b1d5b1c73fdc1ac9b30ccd5d5b5ed69}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a8b1d5b1c73fdc1ac9b30ccd5d5b5ed69}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!objects@{objects}}
+\index{objects@{objects}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{objects}{objects}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere}{Sphere}}$>$ Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+objects = new List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_utilities_1_1_sphere}{Sphere}}$>$()}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_ae651d58b45ad7c6a84cba57c49b129da}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_ae651d58b45ad7c6a84cba57c49b129da}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!prefab@{prefab}}
+\index{prefab@{prefab}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{prefab}{prefab}}
+{\footnotesize\ttfamily Game\+Object Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+prefab}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_acce204b8c42b4a17b4e1dc6279674044}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_acce204b8c42b4a17b4e1dc6279674044}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!searchMax@{searchMax}}
+\index{searchMax@{searchMax}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{searchMax}{searchMax}}
+{\footnotesize\ttfamily float Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+search\+Max = 0}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a35c7cac56de26928868b2cc51fd2d8a7}\label{class_basic_menu_framework_1_1_utilities_1_1_sphere_generator_a35c7cac56de26928868b2cc51fd2d8a7}} 
+\index{BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}!searchMin@{searchMin}}
+\index{searchMin@{searchMin}!BasicMenuFramework.Utilities.SphereGenerator@{BasicMenuFramework.Utilities.SphereGenerator}}
+\doxysubsubsection{\texorpdfstring{searchMin}{searchMin}}
+{\footnotesize\ttfamily float Basic\+Menu\+Framework.\+Utilities.\+Sphere\+Generator.\+search\+Min = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/steve/\+Documents/\+Git\+Hub/\+Basic\+Menu\+Framework/\+Assets/\+Basic\+Menu\+Framework/\+Utilities/\+Sort and Search/\+Scripts/\mbox{\hyperlink{_sphere_generator_8cs}{Sphere\+Generator.\+cs}}\end{DoxyCompactItemize}

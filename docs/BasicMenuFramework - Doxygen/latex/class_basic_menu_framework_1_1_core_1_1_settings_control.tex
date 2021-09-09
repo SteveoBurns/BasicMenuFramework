@@ -1,0 +1,181 @@
+\hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control}{}\doxysection{Basic\+Menu\+Framework.\+Core.\+Settings\+Control Class Reference}
+\label{class_basic_menu_framework_1_1_core_1_1_settings_control}\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+
+
+This class handles the graphics options for the menu system.  
+
+
+Inheritance diagram for Basic\+Menu\+Framework.\+Core.\+Settings\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_basic_menu_framework_1_1_core_1_1_settings_control}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_af716087ad2a41aa897f85c7c02492b26}{Set\+Resolution}} (int res\+Index)
+\begin{DoxyCompactList}\small\item\em Setting the chosen resolution from the dropdown on the UI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a39ab918192b8ceec4ae0fa0de4dcf922}{Quality}} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Sets the graphics quality level \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a0b7277ae48af710f01e93159de766eac}{Load\+Player\+Prefs}} ()
+\begin{DoxyCompactList}\small\item\em Loads any saved player prefs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_ad6c52e070a031d51e5ec739c259b7d71}{Fullscreen}} (bool \+\_\+fullscreen)
+\begin{DoxyCompactList}\small\item\em Turns fullscreen mode on and off \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a4f959376cef8085e02ea35f0b52a2459}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a8e61cdd3e0373760af23e3865e10bd4f}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a9d107bbe69931c495be906f2d0d9b4b1}{Check\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Null Checks and throws Exceptions for all variables within the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a3058a2ac46bc1288e2586ce1882b694f}{Resolutions}} ()
+\begin{DoxyCompactList}\small\item\em Gets the screens resolutions, displays them in the dropdown, sets the default and saves the choice. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a115cc792bcea4dfbb0ccbd772f150c8f}{Quality\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Setting up the Quality Options for the dropdown on the UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dropdown \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a32a936e644c5b3a2e489da7588365bf0}{resolution\+Dropdown}}
+\item 
+Dropdown \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_ad5936834de297b33517f830067627811}{quality\+Dropdown}}
+\item 
+Toggle \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a98b8f741baf883e43ec8f75b8ad1231c}{fullscreen\+Toggle}}
+\item 
+Resolution\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_settings_control_a7d1f6f2f7b7d7e682b6db8052ee3f763}{allowed\+Res}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles the graphics options for the menu system. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a4f959376cef8085e02ea35f0b52a2459}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a4f959376cef8085e02ea35f0b52a2459}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!Awake@{Awake}}
+\index{Awake@{Awake}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a9d107bbe69931c495be906f2d0d9b4b1}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a9d107bbe69931c495be906f2d0d9b4b1}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!CheckVariables@{CheckVariables}}
+\index{CheckVariables@{CheckVariables}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{CheckVariables()}{CheckVariables()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Check\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Null Checks and throws Exceptions for all variables within the class. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unassigned\+Reference\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_ad6c52e070a031d51e5ec739c259b7d71}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_ad6c52e070a031d51e5ec739c259b7d71}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!Fullscreen@{Fullscreen}}
+\index{Fullscreen@{Fullscreen}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{Fullscreen()}{Fullscreen()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Fullscreen (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+fullscreen }\end{DoxyParamCaption})}
+
+
+
+Turns fullscreen mode on and off 
+
+~\newline
+ \mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a0b7277ae48af710f01e93159de766eac}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a0b7277ae48af710f01e93159de766eac}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!LoadPlayerPrefs@{LoadPlayerPrefs}}
+\index{LoadPlayerPrefs@{LoadPlayerPrefs}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{LoadPlayerPrefs()}{LoadPlayerPrefs()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Load\+Player\+Prefs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads any saved player prefs 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a39ab918192b8ceec4ae0fa0de4dcf922}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a39ab918192b8ceec4ae0fa0de4dcf922}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!Quality@{Quality}}
+\index{Quality@{Quality}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{Quality()}{Quality()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Quality (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Sets the graphics quality level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+index} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a115cc792bcea4dfbb0ccbd772f150c8f}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a115cc792bcea4dfbb0ccbd772f150c8f}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!QualitySetup@{QualitySetup}}
+\index{QualitySetup@{QualitySetup}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{QualitySetup()}{QualitySetup()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Quality\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Setting up the Quality Options for the dropdown on the UI. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a3058a2ac46bc1288e2586ce1882b694f}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a3058a2ac46bc1288e2586ce1882b694f}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!Resolutions@{Resolutions}}
+\index{Resolutions@{Resolutions}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{Resolutions()}{Resolutions()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Resolutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the screens resolutions, displays them in the dropdown, sets the default and saves the choice. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_af716087ad2a41aa897f85c7c02492b26}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_af716087ad2a41aa897f85c7c02492b26}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!SetResolution@{SetResolution}}
+\index{SetResolution@{SetResolution}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{SetResolution()}{SetResolution()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Set\+Resolution (\begin{DoxyParamCaption}\item[{int}]{res\+Index }\end{DoxyParamCaption})}
+
+
+
+Setting the chosen resolution from the dropdown on the UI 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a8e61cdd3e0373760af23e3865e10bd4f}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a8e61cdd3e0373760af23e3865e10bd4f}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!Start@{Start}}
+\index{Start@{Start}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a7d1f6f2f7b7d7e682b6db8052ee3f763}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a7d1f6f2f7b7d7e682b6db8052ee3f763}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!allowedRes@{allowedRes}}
+\index{allowedRes@{allowedRes}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{allowedRes}{allowedRes}}
+{\footnotesize\ttfamily Resolution \mbox{[}$\,$\mbox{]} Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+allowed\+Res\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a98b8f741baf883e43ec8f75b8ad1231c}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a98b8f741baf883e43ec8f75b8ad1231c}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!fullscreenToggle@{fullscreenToggle}}
+\index{fullscreenToggle@{fullscreenToggle}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{fullscreenToggle}{fullscreenToggle}}
+{\footnotesize\ttfamily Toggle Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+fullscreen\+Toggle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_ad5936834de297b33517f830067627811}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_ad5936834de297b33517f830067627811}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!qualityDropdown@{qualityDropdown}}
+\index{qualityDropdown@{qualityDropdown}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{qualityDropdown}{qualityDropdown}}
+{\footnotesize\ttfamily Dropdown Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+quality\+Dropdown\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_settings_control_a32a936e644c5b3a2e489da7588365bf0}\label{class_basic_menu_framework_1_1_core_1_1_settings_control_a32a936e644c5b3a2e489da7588365bf0}} 
+\index{BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}!resolutionDropdown@{resolutionDropdown}}
+\index{resolutionDropdown@{resolutionDropdown}!BasicMenuFramework.Core.SettingsControl@{BasicMenuFramework.Core.SettingsControl}}
+\doxysubsubsection{\texorpdfstring{resolutionDropdown}{resolutionDropdown}}
+{\footnotesize\ttfamily Dropdown Basic\+Menu\+Framework.\+Core.\+Settings\+Control.\+resolution\+Dropdown\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/steve/\+Documents/\+Git\+Hub/\+Basic\+Menu\+Framework/\+Assets/\+Basic\+Menu\+Framework/\+Core/\mbox{\hyperlink{_settings_control_8cs}{Settings\+Control.\+cs}}\end{DoxyCompactItemize}

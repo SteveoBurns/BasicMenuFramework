@@ -1,0 +1,126 @@
+\hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control}{}\doxysection{Basic\+Menu\+Framework.\+Core.\+Menu\+Control Class Reference}
+\label{class_basic_menu_framework_1_1_core_1_1_menu_control}\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+
+
+The \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control}{Menu\+Control}} class handles all the UI functionality for scene management, pause and quit.  
+
+
+Inheritance diagram for Basic\+Menu\+Framework.\+Core.\+Menu\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_basic_menu_framework_1_1_core_1_1_menu_control}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_1_1_scene_load_button}{Scene\+Load\+Button}}
+\begin{DoxyCompactList}\small\item\em This contains the data needed for the Scene Load Buttons list to function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a7940b29512dd80e5f9605172f107f689}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em Handles Pause functionality for the UI button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a8894c644620802084b55642be789bb6a}{Quit\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Quits from both the Play Mode in the Unity \mbox{\hyperlink{namespace_basic_menu_framework_1_1_editor}{Editor}} and the Built Application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_abd3893d414a5b01176b7bb2f3c6eac3a}{show\+Pop\+Up}} = false
+\item 
+List$<$ \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_1_1_scene_load_button}{Scene\+Load\+Button}} $>$ \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a8d263a30b59b71ef60f96acf258c1136}{scene\+Load\+Buttons}} = new List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_1_1_scene_load_button}{Scene\+Load\+Button}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a74f3fce848edd27bd858df595c43c8e1}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a5de55dbb27879dd23d698afc733775fd}{quit\+Button}}
+\item 
+Button \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a3901d5610efac37f7077b53366d1b9cf}{pause\+Button}}
+\item 
+Game\+Object \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_a77358a658cde6ba15804fe9985836d8e}{pop\+Up}}
+\item 
+bool \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_ad8f195117cd18dbe86d48887dbc64c6a}{is\+Paused}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control}{Menu\+Control}} class handles all the UI functionality for scene management, pause and quit. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a7940b29512dd80e5f9605172f107f689}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a7940b29512dd80e5f9605172f107f689}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!Pause@{Pause}}
+\index{Pause@{Pause}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles Pause functionality for the UI button. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a8894c644620802084b55642be789bb6a}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a8894c644620802084b55642be789bb6a}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!QuitGame@{QuitGame}}
+\index{QuitGame@{QuitGame}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{QuitGame()}{QuitGame()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+Quit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Quits from both the Play Mode in the Unity \mbox{\hyperlink{namespace_basic_menu_framework_1_1_editor}{Editor}} and the Built Application. 
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a74f3fce848edd27bd858df595c43c8e1}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a74f3fce848edd27bd858df595c43c8e1}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!Start@{Start}}
+\index{Start@{Start}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_ad8f195117cd18dbe86d48887dbc64c6a}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_ad8f195117cd18dbe86d48887dbc64c6a}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!isPaused@{isPaused}}
+\index{isPaused@{isPaused}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{isPaused}{isPaused}}
+{\footnotesize\ttfamily bool Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+is\+Paused = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a3901d5610efac37f7077b53366d1b9cf}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a3901d5610efac37f7077b53366d1b9cf}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!pauseButton@{pauseButton}}
+\index{pauseButton@{pauseButton}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{pauseButton}{pauseButton}}
+{\footnotesize\ttfamily Button Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+pause\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a77358a658cde6ba15804fe9985836d8e}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a77358a658cde6ba15804fe9985836d8e}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!popUp@{popUp}}
+\index{popUp@{popUp}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{popUp}{popUp}}
+{\footnotesize\ttfamily Game\+Object Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+pop\+Up\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a5de55dbb27879dd23d698afc733775fd}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a5de55dbb27879dd23d698afc733775fd}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!quitButton@{quitButton}}
+\index{quitButton@{quitButton}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{quitButton}{quitButton}}
+{\footnotesize\ttfamily Button Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+quit\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_a8d263a30b59b71ef60f96acf258c1136}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_a8d263a30b59b71ef60f96acf258c1136}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!sceneLoadButtons@{sceneLoadButtons}}
+\index{sceneLoadButtons@{sceneLoadButtons}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{sceneLoadButtons}{sceneLoadButtons}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_1_1_scene_load_button}{Scene\+Load\+Button}}$>$ Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+scene\+Load\+Buttons = new List$<$\mbox{\hyperlink{class_basic_menu_framework_1_1_core_1_1_menu_control_1_1_scene_load_button}{Scene\+Load\+Button}}$>$()}
+
+\mbox{\Hypertarget{class_basic_menu_framework_1_1_core_1_1_menu_control_abd3893d414a5b01176b7bb2f3c6eac3a}\label{class_basic_menu_framework_1_1_core_1_1_menu_control_abd3893d414a5b01176b7bb2f3c6eac3a}} 
+\index{BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}!showPopUp@{showPopUp}}
+\index{showPopUp@{showPopUp}!BasicMenuFramework.Core.MenuControl@{BasicMenuFramework.Core.MenuControl}}
+\doxysubsubsection{\texorpdfstring{showPopUp}{showPopUp}}
+{\footnotesize\ttfamily bool Basic\+Menu\+Framework.\+Core.\+Menu\+Control.\+show\+Pop\+Up = false}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/steve/\+Documents/\+Git\+Hub/\+Basic\+Menu\+Framework/\+Assets/\+Basic\+Menu\+Framework/\+Core/\mbox{\hyperlink{_menu_control_8cs}{Menu\+Control.\+cs}}\end{DoxyCompactItemize}
