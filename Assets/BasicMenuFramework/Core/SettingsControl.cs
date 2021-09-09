@@ -19,6 +19,7 @@ namespace BasicMenuFramework.Core
         [SerializeField, Tooltip("The Toggle for fullscreen")] 
         private Toggle fullscreenToggle;
 
+        // Holds allowed resolutions for the screen.
         private Resolution[] allowedRes;
         
 
