@@ -68,7 +68,7 @@ namespace BasicMenuFramework.Core
                 if(sceneLoadButtons[i].sceneToLoad != null)
                     sceneLoadButtons[i].button.onClick.AddListener(sceneLoadButtons[i].LoadScene);
                 else
-                    throw new NullReferenceException($"No corresponding Scene to Load has been set in the Inspector for {sceneLoadButtons[i].button.name}.");
+                    Debug.LogWarning($"No corresponding Scene to Load has been set in the Inspector for {sceneLoadButtons[i].button.name}.");
             }
             
         }
